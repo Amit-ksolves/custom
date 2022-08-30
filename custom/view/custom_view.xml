@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_custom_form_inherit" model="ir.ui.view">
+        <field name="name">sale.order.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+                <xpath expr="//header//button[@name='action_confirm']" position="after">
+                        <button name="%(custom.wiz_sale_order_wizard)d" type="action" string="Update Custom Lines" class="oe_highlight"/>
+                </xpath>
+            <header>
+                 <button name="action_confirm" type="object" string="Confirm" class="btn-primary"/>
+            </header>
+            <notebook position="inside">
+                <page string="Custom Tab" name="Custom Tab">
+                    <field name="custom_lines">
+                        <tree editable="bottom">
+                            <field name="product_id"/>
+                            <field name="name"/>
+                            <field name="quantity"/>
+                            <field name="price_unit"/>
+                            <field name="tax_ids"/>
+                            <field name="price_subtotal"/>
+                        </tree>
+                    </field>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>

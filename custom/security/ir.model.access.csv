@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_wiz_sale_order,access.wiz.sale.order,model_wiz_sale_order,base.group_user,1,1,1,1
+access_custom_order_line,access.custom.order.line,model_custom_order_line,base.group_user,1,1,1,1
+
+access_wiz_sale_order_line,access.wiz.sale.order.line,model_wiz_sale_order_line,base.group_user,1,1,1,1
